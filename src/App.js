@@ -9,13 +9,13 @@ class App extends Component {
   };
 
   addTodoHandler = (newTodo) => {
-    let todos = this.state.todos;
+    let todos = [...this.state.todos];
     todos.push(newTodo)
     this.setState({todos})
   }
 
   removeTodoHandler = (i) => {
-    let todos = this.state.todos;
+    let todos = [...this.state.todos];
     todos.splice(i, 1);
     this.setState({todos});
   }; 
